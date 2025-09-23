@@ -1,38 +1,72 @@
 /* Estilos Gerais do Corpo da Página */
 body {
-    font-family: Arial, sans-serif; /* Fonte limpa e universal */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Um cinza bem claro para o fundo */
-    color: #333; /* Cor do texto principal (cinza escuro) */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Estilo do Cabeçalho */
 header {
-    background-color: #2c5e3A; /* Verde amazônico escuro */
-    color: #fff; /* Texto branco */
-    padding: 20px 0;
+    background-color: #2c5e3A;
+    color: #fff;
+    padding: 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Tamanho do título principal */
+    font-size: 2.5em;
 }
 
 header p {
     margin-top: 5px;
     font-size: 1.2em;
+    margin-bottom: 25px; /* Aumenta o espaço antes do formulário */
+}
+
+/* Seção do formulário de satisfação (agora no header) */
+.satisfacao-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco com transparência */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 600px; /* Limita a largura da seção */
+}
+
+.satisfacao-section h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+    color: #fff;
+}
+
+.botao-satisfacao {
+    display: inline-block;
+    background-color: #ff9800;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.botao-satisfacao:hover {
+    background-color: #f57c00;
 }
 
 /* Conteúdo Principal */
 main {
     padding: 20px;
-    max-width: 1200px; /* Limita a largura em telas muito grandes */
-    margin: 0 auto; /* Centraliza o conteúdo principal */
+    max-width: 1200px;
+    margin: 20px auto 0; /* Adiciona margem no topo */
 }
 
+/* Título da seção de lojas */
 main h2 {
     text-align: center;
     color: #333;
@@ -42,47 +76,52 @@ main h2 {
 /* Grade de Lojas */
 .lojas-container {
     display: grid;
-    /* Cria colunas flexíveis, cada uma com no mínimo 280px */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px;
 }
 
 /* Estilo de cada Card de Loja */
 .loja-card {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 8px; /* Bordas arredondadas */
+    border-radius: 8px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s; /* Animação suave */
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .loja-card:hover {
-    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+    transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.loja-card h3 {
-    margin-top: 0;
+/* Estilos para a logo dentro do card */
+.loja-logo {
+    max-width: 100%;
+    height: 100px;
+    object-fit: contain;
     margin-bottom: 15px;
-    color: #2c5e3A; /* Título do card com a cor de destaque */
 }
 
 /* Estilo do Link "Ver Cardápio" */
 .loja-card a {
     display: inline-block;
-    background-color: #4CAF50; /* Um verde mais vibrante para o botão */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.2s;
+    margin-top: auto;
 }
 
 .loja-card a:hover {
-    background-color: #45a049; /* Escurece um pouco no hover */
+    background-color: #45a049;
 }
 
 /* Estilo do Rodapé */
